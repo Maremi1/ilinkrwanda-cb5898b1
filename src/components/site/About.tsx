@@ -31,26 +31,51 @@ export default function About() {
         {/* 361 Diagram */}
         <div className="relative reveal flex justify-center">
           <div className="relative w-[340px] h-[340px] md:w-[440px] md:h-[440px]">
+            {/* Soft glow halo */}
+            <div className="absolute inset-6 rounded-full bg-gradient-to-br from-ilink/20 via-sky/10 to-transparent blur-2xl animate-pulse-glow" />
+
             <svg viewBox="0 0 200 200" className="absolute inset-0 w-full h-full -rotate-90">
               <defs>
                 <linearGradient id="arc" x1="0" y1="0" x2="1" y2="1">
                   <stop offset="0%" stopColor="hsl(203 82% 51%)" />
                   <stop offset="100%" stopColor="hsl(199 88% 72%)" />
                 </linearGradient>
+                <filter id="arcGlow">
+                  <feGaussianBlur stdDeviation="2" result="b" />
+                  <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
               </defs>
-              <circle cx="100" cy="100" r="86" fill="none" stroke="hsl(210 30% 90%)" strokeWidth="3" />
+              {/* Dotted track */}
+              <circle cx="100" cy="100" r="86" fill="none" stroke="hsl(210 30% 90%)" strokeWidth="3" strokeDasharray="2 6" />
+              {/* Animated arc draw-on */}
               <circle
                 cx="100" cy="100" r="86" fill="none" stroke="url(#arc)" strokeWidth="6"
-                strokeLinecap="round" strokeDasharray="540 540"
-                style={{ transformOrigin: "center", transform: "rotate(2deg)" }}
+                strokeLinecap="round" strokeDasharray="540"
+                filter="url(#arcGlow)"
+                className="animate-draw-arc"
               />
+              {/* Tick marks every 10° */}
+              {Array.from({ length: 36 }).map((_, i) => {
+                const angle = (i * 10 * Math.PI) / 180;
+                const x1 = 100 + Math.cos(angle) * 76;
+                const y1 = 100 + Math.sin(angle) * 76;
+                const x2 = 100 + Math.cos(angle) * 72;
+                const y2 = 100 + Math.sin(angle) * 72;
+                return <line key={i} x1={x1} y1={y1} x2={x2} y2={y2} stroke="hsl(203 82% 51%)" strokeOpacity="0.2" strokeWidth="1" />;
+              })}
             </svg>
+
+            {/* Center text with subtle pulse */}
             <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
-              <div className="font-display text-7xl md:text-8xl font-bold text-gradient leading-none">361°</div>
+              <div className="font-display text-7xl md:text-8xl font-bold text-gradient leading-none animate-degree-pop">361°</div>
               <div className="mt-2 text-sm uppercase tracking-widest text-navy/60">Holistic Approach</div>
             </div>
-            {/* tiny dot at the +1 degree */}
-            <div className="absolute top-2 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-ilink shadow-lg shadow-ilink/60 animate-pulse-glow" />
+
+            {/* Orbiting dot — full revolution */}
+            <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+              <div className="hidden md:block w-4 h-4 rounded-full bg-ilink shadow-lg shadow-ilink/60 animate-orbit-dot" />
+              <div className="md:hidden w-3 h-3 rounded-full bg-ilink shadow-lg shadow-ilink/60 animate-orbit-dot-sm" />
+            </div>
           </div>
         </div>
       </div>

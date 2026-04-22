@@ -210,8 +210,29 @@
   to { transform: translateX(-50%); }
 }
 
+@keyframes draw-arc {
+  from { stroke-dashoffset: 540; }
+  to { stroke-dashoffset: 0; }
+}
+@keyframes orbit-dot {
+  from { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
+  to { transform: rotate(361deg) translateY(-170px) rotate(-361deg); }
+}
+@keyframes orbit-dot-sm {
+  from { transform: rotate(0deg) translateY(-130px) rotate(0deg); }
+  to { transform: rotate(361deg) translateY(-130px) rotate(-361deg); }
+}
+@keyframes degree-pop {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 hsl(var(--ilink-blue) / 0)); }
+  50% { transform: scale(1.04); filter: drop-shadow(0 6px 24px hsl(var(--ilink-blue) / 0.45)); }
+}
+
 .animate-float { animation: float 6s ease-in-out infinite; }
 .animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
 .animate-orbit { animation: orbit 30s linear infinite; }
 .animate-blob { animation: blob 18s ease-in-out infinite; }
 .animate-marquee { animation: marquee 40s linear infinite; }
+.animate-draw-arc { animation: draw-arc 2.4s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
+.animate-orbit-dot { animation: orbit-dot 8s linear infinite; }
+.animate-orbit-dot-sm { animation: orbit-dot-sm 8s linear infinite; }
+.animate-degree-pop { animation: degree-pop 4s ease-in-out infinite; }
