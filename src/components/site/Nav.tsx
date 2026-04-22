@@ -32,12 +32,6 @@ export default function Nav() {
             </a>
           ))}
         </nav>
-        <a
-          href="#contact"
-          className="hidden md:inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-lg shadow-ilink/30 hover:shadow-ilink/50 transition-shadow"
-        >
-          Partner With Us
-        </a>
         <button onClick={() => setOpen(!open)} className="lg:hidden p-2 text-navy" aria-label="Menu">
           {open ? <X size={20} /> : <Menu size={20} />}
         </button>
