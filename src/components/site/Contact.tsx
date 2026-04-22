@@ -31,25 +31,25 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8">
-          <form onSubmit={onSubmit} className="lg:col-span-3 glass-dark rounded-3xl p-7 md:p-9 space-y-4 reveal">
+          <form onSubmit={onSubmit} className="lg:col-span-3 glass-dark rounded-3xl p-7 md:p-9 space-y-5 reveal">
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="text-xs font-semibold text-white/70 uppercase tracking-wider">Name</label>
-                <input required className="mt-1.5 w-full bg-white/5 border border-white/10 text-white placeholder:text-white/40 rounded-xl px-4 py-3 outline-none focus:border-sky/60 focus:bg-white/10 transition-colors" placeholder="Your full name" />
+                <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Name</label>
+                <input required className="input-dark mt-1.5" placeholder="Your full name" />
               </div>
               <div>
-                <label className="text-xs font-semibold text-white/70 uppercase tracking-wider">Company</label>
-                <input className="mt-1.5 w-full bg-white/5 border border-white/10 text-white placeholder:text-white/40 rounded-xl px-4 py-3 outline-none focus:border-sky/60 focus:bg-white/10 transition-colors" placeholder="Organization" />
+                <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Company</label>
+                <input className="input-dark mt-1.5" placeholder="Organization" />
               </div>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
-                <label className="text-xs font-semibold text-white/70 uppercase tracking-wider">Email</label>
-                <input required type="email" className="mt-1.5 w-full bg-white/5 border border-white/10 text-white placeholder:text-white/40 rounded-xl px-4 py-3 outline-none focus:border-sky/60 focus:bg-white/10 transition-colors" placeholder="you@company.com" />
+                <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Email</label>
+                <input required type="email" className="input-dark mt-1.5" placeholder="you@company.com" />
               </div>
               <div>
-                <label className="text-xs font-semibold text-white/70 uppercase tracking-wider">Interest</label>
-                <select className="mt-1.5 w-full bg-white/5 border border-white/10 text-white rounded-xl px-4 py-3 outline-none focus:border-sky/60 focus:bg-white/10 transition-colors">
+                <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Interest</label>
+                <select className="input-dark mt-1.5 appearance-none cursor-pointer">
                   <option className="bg-navy">Strategic R&D / Consultancy</option>
                   <option className="bg-navy">Executive Training</option>
                   <option className="bg-navy">Digital Platforms</option>
@@ -59,10 +59,10 @@ export default function Contact() {
               </div>
             </div>
             <div>
-              <label className="text-xs font-semibold text-white/70 uppercase tracking-wider">Message</label>
-              <textarea required rows={5} className="mt-1.5 w-full bg-white/5 border border-white/10 text-white placeholder:text-white/40 rounded-xl px-4 py-3 outline-none focus:border-sky/60 focus:bg-white/10 transition-colors resize-none" placeholder="Tell us about your project or opportunity" />
+              <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Message</label>
+              <textarea required rows={5} className="input-dark mt-1.5 resize-none" placeholder="Tell us about your project or opportunity" />
             </div>
-            <button disabled={sending} className="inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-xl shadow-ilink/40 hover:shadow-ilink/60 transition-all hover:-translate-y-0.5 disabled:opacity-60">
+            <button disabled={sending} className="inline-flex items-center gap-2 rounded-2xl px-7 py-4 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-xl shadow-ilink/40 hover:shadow-ilink/60 transition-all hover:-translate-y-0.5 disabled:opacity-60 ring-focus">
               {sending ? "Sending..." : "Send Message"} <Send size={15} />
             </button>
           </form>
