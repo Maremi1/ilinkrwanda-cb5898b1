@@ -1,6 +1,6 @@
 import logo from "@/assets/ilink-logo.png";
 
-const brands = ["iBank", "Bima Kwik", "myEstate", "iMine", "iSupply", "Mama Mia's Soko", "Dunamis Delivery", "iClean", "Atomic Star"];
+
 
 export default function Footer() {
   return (
