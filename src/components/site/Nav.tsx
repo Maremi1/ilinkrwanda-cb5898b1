@@ -21,7 +21,6 @@ export default function Nav() {
         <a href="#top" className="flex items-center gap-2.5">
           <img src={logo} alt="I Link Rwanda logo" className="h-9 w-9 object-contain" />
           <div className="leading-tight">
-            <div className="font-display font-bold text-navy text-sm md:text-base">I Link Rwanda</div>
             <div className="text-[10px] md:text-[11px] text-muted-foreground -mt-0.5">Limited</div>
           </div>
         </a>
