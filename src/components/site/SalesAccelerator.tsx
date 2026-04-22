@@ -33,12 +33,19 @@ export default function SalesAccelerator() {
 
         <div className="mt-14 grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
           {modules.map((m, i) => (
-            <div key={m.title} className="glass-dark rounded-2xl p-6 hover:bg-white/10 transition-colors reveal" style={{ transitionDelay: `${i * 80}ms` }}>
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-ilink to-sky flex items-center justify-center shadow-lg shadow-ilink/40">
+            <div
+              key={m.title}
+              className="group glass-dark rounded-2xl p-6 reveal card-glow transition-all duration-500 hover:-translate-y-1.5 hover:bg-white/[0.08]"
+              style={{ transitionDelay: `${i * 80}ms` }}
+            >
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-ilink to-sky flex items-center justify-center shadow-lg shadow-ilink/40 group-hover:shadow-ilink/70 transition-shadow">
                 <m.icon className="text-white" size={22} />
               </div>
-              <h3 className="mt-5 font-display font-bold text-white">{m.title}</h3>
+              <h3 className="mt-5 font-display font-bold text-white text-lg">{m.title}</h3>
               <p className="mt-2 text-sm text-white/70 leading-relaxed">{m.desc}</p>
+              <div className="mt-5 inline-flex items-center gap-1.5 text-[10px] font-semibold tracking-widest uppercase text-sky/80">
+                Module {String(i + 1).padStart(2, "0")}
+              </div>
             </div>
           ))}
         </div>

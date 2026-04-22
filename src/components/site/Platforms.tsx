@@ -29,9 +29,10 @@ export default function Platforms() {
     <section className="container py-20 md:py-28">
       <div className="text-center max-w-3xl mx-auto reveal">
         <div className="text-xs font-semibold tracking-widest text-ilink mb-3">PROPRIETARY DIGITAL PLATFORMS</div>
-        <h2 className="font-display text-3xl md:text-5xl font-bold text-navy">
+        <h2 className="font-display text-3xl md:text-5xl font-bold text-navy leading-tight tracking-tight text-balance">
           Built, owned, <span className="text-gradient">and operating at scale</span>
         </h2>
+        <p className="mt-4 text-navy/65 text-lg">Three flagship platforms anchoring Rwanda's digital economy.</p>
       </div>
 
       <div className="mt-14 grid md:grid-cols-3 gap-6">
