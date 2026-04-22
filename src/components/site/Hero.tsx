@@ -16,7 +16,7 @@ export default function Hero() {
             <span className="w-2 h-2 rounded-full bg-ilink animate-pulse-glow" />
             <span className="text-xs font-semibold tracking-widest text-navy/80">ARCHITECTING RWANDA'S DIGITAL & FINANCIAL FUTURE</span>
           </div>
-          <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-navy leading-[1.05]">
+          <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] font-bold text-navy leading-[1.08] tracking-tight text-balance">
             Building Market-Ready Solutions with a{" "}
             <span className="text-gradient">361° Holistic Approach</span>
           </h1>
@@ -25,13 +25,23 @@ export default function Hero() {
             economy through proprietary platforms, deep regulatory expertise, and an
             ecosystem that goes one degree beyond a full circle.
           </p>
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a href="#services" className="group inline-flex items-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-xl shadow-ilink/30 hover:shadow-ilink/50 transition-all hover:-translate-y-0.5">
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href="#services" className="group inline-flex items-center gap-2 rounded-2xl px-7 py-4 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-xl shadow-ilink/30 hover:shadow-ilink/50 transition-all hover:-translate-y-0.5 ring-focus">
               Explore Solutions <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#about" className="inline-flex items-center gap-2 glass rounded-xl px-6 py-3.5 text-sm font-semibold text-navy hover:bg-white/80 transition-colors">
+            <a href="#about" className="inline-flex items-center gap-2 glass rounded-2xl px-7 py-4 text-sm font-semibold text-navy hover:bg-white/85 transition-colors ring-focus">
               <Play size={14} className="text-ilink" /> Watch Our Story
             </a>
+          </div>
+
+          {/* Mini trust row */}
+          <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-navy/60">
+            <div className="flex -space-x-2">
+              <span className="w-6 h-6 rounded-full bg-gradient-to-br from-ilink to-sky border-2 border-white" />
+              <span className="w-6 h-6 rounded-full bg-gradient-to-br from-sky to-navy border-2 border-white" />
+              <span className="w-6 h-6 rounded-full bg-gradient-to-br from-navy to-ilink border-2 border-white" />
+            </div>
+            <span><strong className="text-navy font-semibold">Trusted</strong> by regulators, INGOs & enterprise partners across Rwanda</span>
           </div>
         </div>
 
