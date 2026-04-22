@@ -30,7 +30,7 @@ export default function About() {
 
         {/* 361 Diagram */}
         <div className="relative reveal flex justify-center">
-          <div className="relative w-[340px] h-[340px] md:w-[440px] md:h-[440px]">
+          <div className="group relative w-[340px] h-[340px] md:w-[440px] md:h-[440px] [&_.animate-orbit-dot]:hover:[animation-play-state:paused] [&_.animate-orbit-dot-sm]:hover:[animation-play-state:paused] [&_.animate-trail-spin]:hover:[animation-play-state:paused] [&_.animate-degree-pop]:hover:[animation-play-state:paused] [&_.animate-pulse-glow]:hover:[animation-play-state:paused]">
             {/* Soft glow halo */}
             <div className="absolute inset-6 rounded-full bg-gradient-to-br from-ilink/20 via-sky/10 to-transparent blur-2xl animate-pulse-glow" />
 
