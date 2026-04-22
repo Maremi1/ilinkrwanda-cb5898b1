@@ -25,9 +25,10 @@ export default function Contact() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-14 reveal">
           <div className="text-xs font-semibold tracking-widest text-sky mb-3">PARTNER WITH US</div>
-          <h2 className="font-display text-3xl md:text-5xl font-bold text-white leading-tight">
+          <h2 className="font-display text-3xl md:text-5xl font-bold text-white leading-[1.1] tracking-tight text-balance">
             Build the future of finance and digital commerce <span className="bg-gradient-to-r from-sky to-white bg-clip-text text-transparent">— with us</span>
           </h2>
+          <p className="mt-5 text-white/65 text-lg">Tell us about your project or partnership — we typically reply within one business day.</p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8">
