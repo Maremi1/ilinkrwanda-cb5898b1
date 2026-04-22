@@ -28,11 +28,17 @@ export default function BrandMarquee() {
         </div>
 
         <div className="relative">
-          {/* Edge fade */}
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-24 bg-gradient-to-r from-navy-deep to-transparent z-10" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-24 bg-gradient-to-l from-navy-deep to-transparent z-10" />
+          {/* Wider, smoother edge fades */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-32 md:w-48 bg-gradient-to-r from-navy-deep via-navy-deep/85 to-transparent z-10" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-32 md:w-48 bg-gradient-to-l from-navy-deep via-navy-deep/85 to-transparent z-10" />
 
-          <div className="overflow-hidden py-2">
+          <div
+            className="overflow-hidden py-2"
+            style={{
+              maskImage: "linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)",
+              WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 14%, black 86%, transparent 100%)",
+            }}
+          >
             <div className="flex gap-4 animate-marquee whitespace-nowrap">
               {[...brands, ...brands, ...brands].map((b, i) => (
                 <span
