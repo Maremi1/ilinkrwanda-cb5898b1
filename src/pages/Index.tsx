@@ -12,6 +12,7 @@ import Ecosystem from "@/components/site/Ecosystem";
 import Platforms from "@/components/site/Platforms";
 import Foundation from "@/components/site/Foundation";
 import Contact from "@/components/site/Contact";
+import BrandMarquee from "@/components/site/BrandMarquee";
 import Footer from "@/components/site/Footer";
 import { useEffect } from "react";
 
@@ -44,6 +45,7 @@ const Index = () => {
       <Ecosystem />
       <Platforms />
       <Foundation />
+      <BrandMarquee />
       <Contact />
       <Footer />
     </main>
