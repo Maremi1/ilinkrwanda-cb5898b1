@@ -216,11 +216,15 @@
 }
 @keyframes orbit-dot {
   from { transform: rotate(0deg) translateY(-170px) rotate(0deg); }
-  to { transform: rotate(361deg) translateY(-170px) rotate(-361deg); }
+  to { transform: rotate(360deg) translateY(-170px) rotate(-360deg); }
 }
 @keyframes orbit-dot-sm {
   from { transform: rotate(0deg) translateY(-130px) rotate(0deg); }
-  to { transform: rotate(361deg) translateY(-130px) rotate(-361deg); }
+  to { transform: rotate(360deg) translateY(-130px) rotate(-360deg); }
+}
+@keyframes trail-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 @keyframes degree-pop {
   0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 hsl(var(--ilink-blue) / 0)); }
@@ -233,6 +237,7 @@
 .animate-blob { animation: blob 18s ease-in-out infinite; }
 .animate-marquee { animation: marquee 40s linear infinite; }
 .animate-draw-arc { animation: draw-arc 2.4s cubic-bezier(0.65, 0, 0.35, 1) forwards; }
-.animate-orbit-dot { animation: orbit-dot 8s linear infinite; }
-.animate-orbit-dot-sm { animation: orbit-dot-sm 8s linear infinite; }
+.animate-orbit-dot { animation: orbit-dot 9s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
+.animate-orbit-dot-sm { animation: orbit-dot-sm 9s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
+.animate-trail-spin { animation: trail-spin 9s cubic-bezier(0.45, 0, 0.55, 1) infinite; }
 .animate-degree-pop { animation: degree-pop 4s ease-in-out infinite; }

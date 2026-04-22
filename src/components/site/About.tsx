@@ -40,9 +40,18 @@ export default function About() {
                   <stop offset="0%" stopColor="hsl(203 82% 51%)" />
                   <stop offset="100%" stopColor="hsl(199 88% 72%)" />
                 </linearGradient>
+                {/* Trail gradient: bright head -> transparent tail */}
+                <linearGradient id="trail" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0%" stopColor="hsl(199 88% 72%)" stopOpacity="0" />
+                  <stop offset="70%" stopColor="hsl(203 82% 51%)" stopOpacity="0.4" />
+                  <stop offset="100%" stopColor="hsl(199 88% 80%)" stopOpacity="1" />
+                </linearGradient>
                 <filter id="arcGlow">
                   <feGaussianBlur stdDeviation="2" result="b" />
                   <feMerge><feMergeNode in="b" /><feMergeNode in="SourceGraphic" /></feMerge>
+                </filter>
+                <filter id="trailGlow">
+                  <feGaussianBlur stdDeviation="3.5" />
                 </filter>
               </defs>
               {/* Dotted track */}
@@ -54,6 +63,26 @@ export default function About() {
                 filter="url(#arcGlow)"
                 className="animate-draw-arc"
               />
+              {/* Glow trail spinning with the dot */}
+              <g className="animate-trail-spin" style={{ transformOrigin: "100px 100px" }}>
+                <circle
+                  cx="100" cy="100" r="86" fill="none"
+                  stroke="hsl(199 88% 72%)" strokeWidth="10"
+                  strokeLinecap="round"
+                  strokeDasharray="120 420"
+                  strokeDashoffset="0"
+                  opacity="0.55"
+                  filter="url(#trailGlow)"
+                />
+                <circle
+                  cx="100" cy="100" r="86" fill="none"
+                  stroke="hsl(199 88% 80%)" strokeWidth="4"
+                  strokeLinecap="round"
+                  strokeDasharray="60 480"
+                  strokeDashoffset="0"
+                  opacity="0.9"
+                />
+              </g>
               {/* Tick marks every 10° */}
               {Array.from({ length: 36 }).map((_, i) => {
                 const angle = (i * 10 * Math.PI) / 180;
@@ -71,10 +100,10 @@ export default function About() {
               <div className="mt-2 text-sm uppercase tracking-widest text-navy/60">Holistic Approach</div>
             </div>
 
-            {/* Orbiting dot — full revolution */}
+            {/* Orbiting dot — eased revolution */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <div className="hidden md:block w-4 h-4 rounded-full bg-ilink shadow-lg shadow-ilink/60 animate-orbit-dot" />
-              <div className="md:hidden w-3 h-3 rounded-full bg-ilink shadow-lg shadow-ilink/60 animate-orbit-dot-sm" />
+              <div className="hidden md:block w-4 h-4 rounded-full bg-ilink shadow-[0_0_24px_6px_hsl(var(--ilink-blue)/0.6)] animate-orbit-dot" />
+              <div className="md:hidden w-3 h-3 rounded-full bg-ilink shadow-[0_0_18px_4px_hsl(var(--ilink-blue)/0.6)] animate-orbit-dot-sm" />
             </div>
           </div>
         </div>
