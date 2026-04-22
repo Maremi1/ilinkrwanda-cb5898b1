@@ -6,14 +6,6 @@ export default function Footer() {
   return (
     <footer className="bg-navy-deep text-white/70 pt-16 pb-10">
       <div className="container">
-        {/* Brand marquee */}
-        <div className="overflow-hidden mask-fade mb-12 border-y border-white/10 py-5">
-          <div className="flex gap-12 animate-marquee whitespace-nowrap">
-            {[...brands, ...brands].map((b, i) => (
-              <span key={i} className="font-display font-semibold text-white/40 tracking-wide text-sm">{b}</span>
-            ))}
-          </div>
-        </div>
 
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
