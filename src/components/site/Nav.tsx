@@ -20,9 +20,6 @@ export default function Nav() {
       <div className="glass rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2.5">
           <img src={logo} alt="I Link Rwanda logo" className="h-9 w-9 object-contain" />
-          <div className="leading-tight">
-            <div className="text-[10px] md:text-[11px] text-muted-foreground -mt-0.5">Limited</div>
-          </div>
         </a>
         <nav className="hidden lg:flex items-center gap-7">
           {links.map((l) => (
