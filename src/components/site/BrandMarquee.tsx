@@ -1,4 +1,24 @@
-const brands = ["iBank", "Bima Kwik", "myEstate", "iMine", "iSupply", "Mama Mia's Soko", "Dunamis Delivery", "iClean", "Atomic Star"];
+import iBank from "@/assets/brand-ibank.png";
+import bimaKwik from "@/assets/brand-bimakwik.png";
+import myEstate from "@/assets/brand-myestate.png";
+import iMine from "@/assets/brand-imine.png";
+import iSupply from "@/assets/brand-isupply.png";
+import soko from "@/assets/brand-soko.png";
+import dunamis from "@/assets/brand-dunamis.png";
+import iClean from "@/assets/brand-iclean.png";
+import atomic from "@/assets/brand-atomic.png";
+
+const brands = [
+  { name: "iBank", logo: iBank },
+  { name: "Bima Kwik", logo: bimaKwik },
+  { name: "myEstate", logo: myEstate },
+  { name: "iMine", logo: iMine },
+  { name: "iSupply", logo: iSupply },
+  { name: "Mama Mia's Soko", logo: soko },
+  { name: "Dunamis Delivery", logo: dunamis },
+  { name: "iClean", logo: iClean },
+  { name: "Atomic Star", logo: atomic },
+];
 
 export default function BrandMarquee() {
   return (
@@ -17,7 +37,7 @@ export default function BrandMarquee() {
       />
 
       <div className="container relative">
-        <div className="text-center mb-8">
+        <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass-dark border border-white/10">
             <span className="w-1.5 h-1.5 rounded-full bg-sky animate-pulse" />
             <span className="text-[11px] uppercase tracking-[0.2em] text-white/70 font-semibold">Our Ecosystem of Brands</span>
@@ -43,12 +63,18 @@ export default function BrandMarquee() {
               {[...brands, ...brands, ...brands].map((b, i) => (
                 <span
                   key={i}
-                  className="group inline-flex items-center gap-3 px-6 py-3 rounded-2xl glass-dark border border-white/10 hover:border-sky/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-ilink/20 cursor-default"
+                  className="group inline-flex items-center justify-center h-20 w-44 md:w-52 px-5 rounded-2xl bg-white/95 border border-white/20 hover:border-sky/60 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-ilink/30 cursor-default shrink-0"
+                  title={b.name}
                 >
-                  <span className="w-2 h-2 rounded-full bg-gradient-to-br from-sky to-ilink group-hover:scale-150 transition-transform" />
-                  <span className="font-display font-semibold text-white/85 group-hover:text-white tracking-wide text-sm md:text-base">
-                    {b}
-                  </span>
+                  <img
+                    src={b.logo}
+                    alt={`${b.name} logo`}
+                    width={512}
+                    height={512}
+                    loading="lazy"
+                    decoding="async"
+                    className="max-h-14 w-auto object-contain"
+                  />
                 </span>
               ))}
             </div>
