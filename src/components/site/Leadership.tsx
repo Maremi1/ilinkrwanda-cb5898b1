@@ -1,9 +1,11 @@
 import { Award, BookOpen, Briefcase, Globe2, ShieldCheck, Users } from "lucide-react";
+import portrait1 from "@/assets/leadership-1.jpg";
+import portrait2 from "@/assets/leadership-2.jpg";
 
 const leaders = [
   {
     role: "Regulatory Authority & Financial Innovation Expert",
-    initials: "RA",
+    photo: portrait1,
     summary:
       "18+ years across insurance regulation, financial inclusion and capacity building. Trusted advisor to UNDP and ILO with deep impact across East and Central Africa.",
     chips: [
@@ -16,7 +18,7 @@ const leaders = [
   },
   {
     role: "Visionary Technologist & Government Policies Advocate",
-    initials: "VT",
+    photo: portrait2,
     summary:
       "15+ years architecting digital platforms and shaping public-sector technology policy. Member of the AfCFTA Implementation Committee and pioneer of Rwanda's e-Government procurement systems.",
     chips: [
@@ -45,9 +47,18 @@ export default function Leadership() {
       <div className="mt-14 grid md:grid-cols-2 gap-8">
         {leaders.map((l) => (
           <div key={l.role} className="glass-strong rounded-3xl p-8 hover-lift reveal">
-            <div className="flex items-center gap-4">
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${l.accent} flex items-center justify-center text-white font-display font-bold text-xl shadow-lg`}>
-                {l.initials}
+            <div className="flex items-center gap-5">
+              <div className={`relative w-20 h-20 rounded-2xl bg-gradient-to-br ${l.accent} p-[2px] shadow-lg shrink-0`}>
+                <img
+                  src={l.photo}
+                  alt={l.role}
+                  width={400}
+                  height={400}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover rounded-[14px]"
+                />
+                <span className="absolute inset-0 rounded-2xl ring-1 ring-ilink/30 shadow-[0_0_24px_-4px_hsl(var(--ilink)/0.5)] pointer-events-none" />
               </div>
               <div>
                 <div className="text-xs uppercase tracking-widest text-ilink font-semibold">Co-Founder</div>

@@ -1,4 +1,5 @@
 import logo from "@/assets/ilink-logo.png";
+import kigali from "@/assets/hero-kigali.jpg";
 import { ArrowRight, Play } from "lucide-react";
 
 export default function Hero() {
@@ -6,6 +7,14 @@ export default function Hero() {
     <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Background blobs */}
       <div className="absolute inset-0 -z-10 bg-mesh" />
+      <img
+        src={kigali}
+        alt="Kigali skyline at golden hour"
+        width={1920}
+        height={1080}
+        className="absolute inset-0 -z-10 w-full h-full object-cover opacity-15 mix-blend-multiply pointer-events-none"
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-white/40 via-white/60 to-white/90 pointer-events-none" />
       <div className="absolute -top-24 -left-24 w-[500px] h-[500px] rounded-full bg-ilink/20 blur-3xl animate-blob -z-10" />
       <div className="absolute top-40 -right-32 w-[480px] h-[480px] rounded-full bg-sky/30 blur-3xl animate-blob -z-10" style={{ animationDelay: "5s" }} />
       <div className="absolute inset-0 circuit-pattern opacity-40 -z-10" />

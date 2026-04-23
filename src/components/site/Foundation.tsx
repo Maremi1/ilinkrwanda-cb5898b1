@@ -1,4 +1,5 @@
 import { Heart, Users, Sparkles, Leaf, Scale, GraduationCap } from "lucide-react";
+import banner from "@/assets/foundation-banner.jpg";
 
 const objectives = [
   { icon: Heart, title: "Foster Inclusion", desc: "Bridge gaps for underserved communities through access and opportunity." },
@@ -25,9 +26,23 @@ export default function Foundation() {
               resilience and dignity across Rwanda's most underserved communities.
             </p>
           </div>
-          <div className="glass-strong rounded-3xl p-8 reveal">
-            <div className="font-display text-xl font-bold text-navy">Six Strategic Objectives</div>
-            <p className="text-sm text-navy/70 mt-2">Guiding every program, partnership and investment we make through the foundation.</p>
+          <div className="reveal">
+            <div className="relative rounded-3xl overflow-hidden glass-strong p-2">
+              <img
+                src={banner}
+                alt="Rwandan women entrepreneurs and children united in community"
+                width={1600}
+                height={900}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-64 md:h-72 object-cover rounded-2xl"
+              />
+              <div className="absolute inset-2 rounded-2xl bg-gradient-to-t from-navy/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute bottom-5 left-5 right-5">
+                <div className="font-display text-xl font-bold text-white">Six Strategic Objectives</div>
+                <p className="text-sm text-white/85 mt-1">Guiding every program, partnership and investment we make through the foundation.</p>
+              </div>
+            </div>
           </div>
         </div>
 
