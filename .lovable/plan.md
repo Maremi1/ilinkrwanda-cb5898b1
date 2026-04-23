@@ -1,86 +1,67 @@
 
-# iLink Rwanda — Corporate Website
 
-A premium, glassmorphism-driven corporate website for **I Link Rwanda Limited**, inspired by the iLink logo (electric blue circuitry on white) and the uploaded reference layout — elevated with frosted glass surfaces, soft gradient meshes, subtle circuit-line motifs, and refined motion.
+# Add Rich Media Across the Website
 
-## Visual Direction
-- **Palette**: Deep navy `#0A1F44`, electric iLink blue `#1E9BE9`, sky tint `#7CC7F2`, frosted white, soft sky gradient backgrounds.
-- **Glassmorphism**: Frosted cards (backdrop-blur, semi-transparent white, hairline borders, layered shadows) over animated blue gradient blobs and faint circuit-line SVG patterns echoing the chip in the logo.
-- **Typography**: Modern geometric sans (Inter/Sora) — large editorial headlines with the accent word in iLink blue.
-- **Motion**: Gentle parallax, scroll-reveal fades, hover glow on glass cards, animated counters, marquee for partners/licenses.
-- **Logo**: iLink chip mark used in nav, footer, and as a watermark hero motif.
+Right now the site leans heavily on typography, glass cards, and SVG decoration. Adding curated photography and short looping visuals will make it feel more alive, credible, and human — without breaking the premium glassmorphism aesthetic.
 
-## Site Structure (single-page with anchor nav + dedicated routes)
+Below is a section-by-section media plan. All imagery will be AI-generated (Nano Banana Pro) in a consistent visual language: warm African daylight, Rwandan settings, electric-blue accent lighting echoing the iLink brand, photojournalistic but polished.
 
-**1. Sticky Glass Navigation**
-Logo · Home · About · Leadership · Services · Solutions · Impact · Ecosystem · Foundation · Contact — translucent blurred bar, blue CTA "Partner With Us".
+## Sections to Enrich
 
-**2. Hero**
-- Eyebrow: "ARCHITECTING RWANDA'S DIGITAL & FINANCIAL FUTURE"
-- Headline: "Building Market-Ready Solutions with a **361° Holistic Approach**"
-- Sub: tagline from PDF intro.
-- Two CTAs: "Explore Solutions" / "Watch Our Story".
-- Right side: floating glass panel with the iLink chip illustration, orbiting nodes, and circuit lines (echoes the reference image).
+**1. Hero**
+- Add a subtle background portrait collage (blurred) behind the right-hand chip illustration: Kigali skyline at golden hour with faint circuit overlay.
+- Optional 6–8s looping silent video poster (Kigali rooftops + soft particle motion) — fallback to static image.
 
-**3. Trust Strip (Glass Stat Bar)**
-1.8M+ Households · 451 FIA Ambassadors · RWF 5B Mobilized · 10+ Years Expertise — animated counters in a single frosted bar.
+**2. About — The 361° Advantage**
+- Add a small "in the field" photo strip below the diagram (3 thumbnails: team meeting, fintech UI on phone, rural connectivity) to ground the abstract concept in reality.
 
-**4. The 361° Advantage (About)**
-Editorial split: copy on left, animated 361° circular diagram on right showing the "one degree beyond" concept.
+**3. Leadership**
+- Replace the current monogram avatars with two professional executive portraits (warm studio light, navy backdrop) framed in glass with subtle blue rim glow.
 
-**5. Leadership — Synergistic Partnership**
-Two premium glass profile cards:
-- Regulatory Authority & Financial Innovation Expert (18+ yrs, UNDP/ILO advisor, 500+ certified, 10+ books, AIO Best Book Award).
-- Visionary Technologist & Government Policies Advocate (15+ yrs, AfCFTA Implementation Committee, e-Gov procurement).
+**4. Services (Three Pillars)**
+- Add a contextual photo header to each pillar card:
+  - Strategic R&D → analysts at a workshop wall
+  - Executive Training → classroom of executives with screens
+  - Digital Platform Development → developers around a monitor
 
-**6. Three Service Pillars**
-Glass cards with custom blue iconography:
-- Strategic R&D and Consultancy
-- Executive Training & Capacity Building
-- Digital Platform Development & Implementation
+**5. Innovations Showcase**
+- Add a hero/lifestyle image to each of the 5 product concept tiles (Educare, BNPL, Group Credit Life, Fuel Sales, Climate Index Insurance) so each becomes a visual story rather than text-only.
 
-**7. R&D Innovations Showcase**
-Horizontal scroll/grid of product concepts with glass tiles: Educare Corporate, BNPL Credit Life, Group Credit Life, Fuel Sales Integration, Climate-Linked Index Insurance.
+**6. Sales Accelerator: 2026**
+- Add a dark cinematic background image (boardroom with blue light) behind the dark gradient section, dimmed to ~25% opacity for atmosphere.
 
-**8. Sales Accelerator: 2026**
-Dark gradient section with the brain/network seal motif. Five core modules as glass chips: Identity Boost · Trust Economy · Quantum Physics of Sales · Modern Toolkit (AI) · Learn-Unlearn-Relearn.
+**7. FIA Network Program**
+- Already has the new image carousel — no change.
 
-**9. FIA Network Program (Flagship Case Study)**
-Two-column: narrative + stylized Rwanda map SVG with glowing connection nodes. Role badges: "Lead Implementing Partner" + "Technology & Platform Partner". Embedded impact metrics.
+**8. Proprietary Digital Platforms**
+- Add device mockup images (phone + laptop) for Mama Mia's Soko, Bima Kwik, and FIA Network Management System showing realistic UI screens.
 
-**10. Parent Group — I Link Global Holdings**
-"The Vault" section explaining MARTECH + cross-sector licenses, "Africa and Beyond" tagline, blueprint-style diagram.
+**9. Mama Mia's Foundation**
+- Add a warm photo banner (community gathering, women entrepreneurs, children in classroom) to convey the social mission emotionally.
 
-**11. Ecosystem of Proprietary Licenses**
-5 sector cards (glass), each listing brands:
-- Fintech & Insuretech — iBank, Bima Kwik (award-winning)
-- Real Estate — myEstate
-- Extractives & Trade — iMine, iSupply
-- E-Commerce & Logistics — Mama Mia's Soko, Dunamis Delivery
-- Professional Services — iClean, Atomic Star
+**10. Six Strategic Objectives**
+- Add a subtle iconographic illustration (not photo) per hex card to reinforce each objective without competing with the photography elsewhere.
 
-**12. Proprietary Digital Platforms**
-Featured tiles for Mama Mia's Soko, Bima Kwik, FIA Network Management System with descriptive copy and platform mock visuals.
+**11. Contact**
+- Add a soft photo of the Vision Arcade / Kigali office exterior beside the contact form, in a glass frame.
 
-**13. Mama Mia's Foundation (Social Mission)**
-Warm-toned glass section introducing the INGO arm.
+**12. Footer**
+- Add a thin horizontal Rwanda landscape strip above the footer as a visual transition.
 
-**14. Six Strategic Objectives**
-Hex/grid of six glass cards: Foster Inclusion · Empower & Connect · Promote Well-being · Drive Sustainability · Resolve Conflicts & Uphold Rights · Build Capacity.
+## Technical Approach
 
-**15. Partner CTA**
-Full-width gradient + glass panel: "Partner with I Link Rwanda to Build the Future of Finance and Digital Commerce." → Contact form.
+- Generate all images with `google/gemini-3-pro-image-preview` for consistent quality, saved to `src/assets/` with descriptive names (`hero-kigali.jpg`, `leadership-1.jpg`, etc.).
+- Import as ES modules so Vite hashes and optimizes them.
+- Wrap every image in a glass frame utility (rounded-2xl, hairline border, soft shadow) to stay on-brand.
+- Use `loading="lazy"` and `decoding="async"` on all below-the-fold images for performance.
+- Add a reusable `<MediaFrame>` component (image + optional caption + glass styling) to keep the look consistent across sections.
+- Respect `prefers-reduced-motion` — no autoplay video for users who opt out.
 
-**16. Contact**
-Glass form (Name, Company, Email, Interest, Message) + info card:
-📍 Vision Arcade Executive Suites, KG 379 & KG 9 Avenue, Kigali · 📞 +250 793 146 087 · ✉ info@ilinkbiz.com · 🌐 www.ilinkbiz.com
+## Suggested Rollout (so it stays manageable)
 
-**17. Footer**
-Logo, tagline "Architecting Rwanda's Digital and Financial Future", quick links, license brands, social, legal.
+Phase 1 (highest impact): Hero background, Leadership portraits, Innovations tiles, Foundation banner.
+Phase 2: Services pillar headers, Platforms device mockups, Contact office photo.
+Phase 3: About field strip, Sales Accelerator backdrop, Footer landscape strip, Objectives icons.
 
-## Technical Notes
-- Logo copied to `src/assets/` and used throughout.
-- Custom Tailwind tokens for iLink blue palette + glass utility classes (`.glass`, `.glass-strong`).
-- Decorative SVG: circuit-board lines, orbital chip illustration, Rwanda map with glowing nodes.
-- Smooth-scroll anchors; responsive across mobile/tablet/desktop.
-- Subtle Framer-Motion-style reveal animations using CSS + IntersectionObserver.
+Confirm whether you'd like me to execute **all three phases at once** or **start with Phase 1** only, and I'll proceed.
+
