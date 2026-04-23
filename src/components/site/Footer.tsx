@@ -1,11 +1,22 @@
 import logo from "@/assets/ilink-logo.png";
-
-
+import rwanda from "@/assets/footer-rwanda.jpg";
 
 export default function Footer() {
   return (
-    <footer className="bg-navy-deep text-white/70 pt-16 pb-10">
-      <div className="container">
+    <footer className="bg-navy-deep text-white/70">
+      <div className="relative h-24 md:h-32 overflow-hidden">
+        <img
+          src={rwanda}
+          alt="Rolling hills of Rwanda at sunrise"
+          width={1920}
+          height={512}
+          loading="lazy"
+          decoding="async"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-navy-deep/40 to-navy-deep" />
+      </div>
+      <div className="container pt-12 pb-10">
 
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">

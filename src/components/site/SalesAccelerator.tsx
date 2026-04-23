@@ -1,4 +1,5 @@
 import { Brain, Handshake, Atom, Wrench, RefreshCw } from "lucide-react";
+import boardroom from "@/assets/sales-boardroom.jpg";
 
 const modules = [
   { icon: Brain, title: "Identity Boost", desc: "Rebuilding the seller's identity for the digital economy." },
@@ -12,6 +13,17 @@ export default function SalesAccelerator() {
   return (
     <section className="relative py-24 md:py-32 overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-navy-gradient" />
+      <img
+        src={boardroom}
+        alt=""
+        aria-hidden="true"
+        width={1920}
+        height={1080}
+        loading="lazy"
+        decoding="async"
+        className="absolute inset-0 -z-10 w-full h-full object-cover opacity-25 mix-blend-screen"
+      />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-navy/40 via-transparent to-navy/60" />
       <div className="absolute inset-0 -z-10 circuit-pattern opacity-20" />
       <div className="absolute -top-32 left-1/4 w-[500px] h-[500px] rounded-full bg-ilink/30 blur-3xl animate-blob -z-10" />
       <div className="absolute -bottom-32 right-1/4 w-[450px] h-[450px] rounded-full bg-sky/20 blur-3xl animate-blob -z-10" style={{ animationDelay: "4s" }} />
