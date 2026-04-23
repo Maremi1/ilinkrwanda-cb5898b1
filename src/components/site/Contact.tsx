@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Mail, MapPin, Phone, Globe, Send } from "lucide-react";
 import { toast } from "sonner";
+import office from "@/assets/contact-office.jpg";
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
@@ -69,6 +70,22 @@ export default function Contact() {
           </form>
 
           <div className="lg:col-span-2 space-y-4 reveal">
+            <div className="relative rounded-3xl overflow-hidden glass-dark p-2">
+              <img
+                src={office}
+                alt="Vision Arcade executive office building in Kigali at dusk"
+                width={1200}
+                height={900}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-44 object-cover rounded-2xl"
+              />
+              <div className="absolute inset-2 rounded-2xl bg-gradient-to-t from-navy/80 via-navy/10 to-transparent pointer-events-none" />
+              <div className="absolute bottom-4 left-5 right-5">
+                <div className="text-[10px] uppercase tracking-widest text-sky font-semibold">Headquarters</div>
+                <div className="font-display text-lg font-bold text-white leading-tight mt-0.5">Vision Arcade, Kigali</div>
+              </div>
+            </div>
             <div className="glass-dark rounded-3xl p-7">
               <div className="text-xs uppercase tracking-widest text-sky font-semibold">Visit Us</div>
               <div className="mt-4 space-y-4 text-white/85">

@@ -1,4 +1,7 @@
 import { ShoppingBag, Shield, Network } from "lucide-react";
+import imgSoko from "@/assets/platform-soko.jpg";
+import imgBima from "@/assets/platform-bima.jpg";
+import imgFia from "@/assets/platform-fia.jpg";
 
 const platforms = [
   {
@@ -7,6 +10,7 @@ const platforms = [
     tag: "E-Commerce Platform",
     desc: "An inclusive marketplace empowering Rwandan women entrepreneurs and small producers to reach digital buyers.",
     accent: "from-pink-500/80 to-ilink",
+    img: imgSoko,
   },
   {
     icon: Shield,
@@ -14,6 +18,7 @@ const platforms = [
     tag: "Award-winning Insuretech",
     desc: "Fast, mobile-first insurance distribution platform for the mass market — recognized for product innovation.",
     accent: "from-ilink to-sky",
+    img: imgBima,
   },
   {
     icon: Network,
@@ -21,6 +26,7 @@ const platforms = [
     tag: "Network Operations",
     desc: "Proprietary platform managing 451 ambassadors, training, performance and last-mile data across 30 districts.",
     accent: "from-navy to-ilink",
+    img: imgFia,
   },
 ];
 
@@ -46,20 +52,18 @@ export default function Platforms() {
             <h3 className="font-display text-2xl font-bold text-navy mt-1">{p.name}</h3>
             <p className="mt-3 text-sm text-navy/70 leading-relaxed">{p.desc}</p>
 
-            {/* Mock platform UI */}
-            <div className="mt-6 glass rounded-xl p-3 space-y-2">
-              <div className="flex gap-1.5">
-                <div className="w-2 h-2 rounded-full bg-red-400/60" />
-                <div className="w-2 h-2 rounded-full bg-yellow-400/60" />
-                <div className="w-2 h-2 rounded-full bg-green-400/60" />
-              </div>
-              <div className="h-2 rounded bg-ilink/20 w-3/4" />
-              <div className="h-2 rounded bg-ilink/10 w-1/2" />
-              <div className="grid grid-cols-3 gap-1.5 pt-1">
-                <div className="h-8 rounded bg-gradient-to-br from-ilink/30 to-sky/20" />
-                <div className="h-8 rounded bg-gradient-to-br from-sky/30 to-ilink/20" />
-                <div className="h-8 rounded bg-gradient-to-br from-navy/20 to-ilink/20" />
-              </div>
+            {/* Device mockup */}
+            <div className="mt-6 relative rounded-2xl overflow-hidden glass aspect-[4/3]">
+              <img
+                src={p.img}
+                alt={`${p.name} device mockup`}
+                width={1200}
+                height={900}
+                loading="lazy"
+                decoding="async"
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-white/30 via-transparent to-transparent pointer-events-none" />
             </div>
           </div>
         ))}
