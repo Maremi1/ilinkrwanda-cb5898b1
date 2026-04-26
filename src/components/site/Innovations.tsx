@@ -39,7 +39,8 @@ export default function Innovations() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/10 to-transparent" />
-              <span className="absolute top-3 right-3 text-[10px] font-semibold tracking-widest text-white/95 uppercase glass rounded-full px-2.5 py-1">
+              <span className="absolute top-3 right-3 inline-flex items-center gap-1.5 text-[10px] font-bold tracking-widest text-white uppercase rounded-full px-3 py-1.5 bg-gradient-to-r from-ilink to-sky shadow-lg shadow-navy/30 ring-1 ring-white/40 backdrop-blur-md">
+                <span className="w-1.5 h-1.5 rounded-full bg-white/90" />
                 {p.tag}
               </span>
             </div>
