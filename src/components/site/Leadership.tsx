@@ -104,15 +104,6 @@ export default function Leadership() {
                 </div>
               ))}
             </div>
-
-            <div className="mt-4 flex flex-wrap gap-2">
-              {l.chips.map((c) => (
-                <div key={c.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 border border-ilink/15">
-                  <c.icon size={13} className="text-ilink shrink-0" />
-                  <span className="text-xs font-medium text-navy">{c.label}</span>
-                </div>
-              ))}
-            </div>
           </div>
         ))}
       </div>
