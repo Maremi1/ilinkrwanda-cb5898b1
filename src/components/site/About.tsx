@@ -15,20 +15,18 @@ export default function About() {
         <div className="reveal">
           <div className="text-xs font-semibold tracking-widest text-ilink mb-4">THE 361° ADVANTAGE</div>
           <h2 className="font-display text-3xl md:text-5xl font-bold text-navy leading-tight">
-            One degree beyond <span className="text-gradient">a full circle</span>
+            One degree beyond <span className="text-gradient">the circle</span>
           </h2>
           <p className="mt-6 text-navy/70 text-lg leading-relaxed">
-            We don't just complete the circle of strategy, technology and execution — we go one
-            degree further. Our 361° Holistic Approach blends regulatory mastery, technological
-            innovation and on-the-ground community networks to deliver solutions that perform
-            in the real Rwandan market.
+            Our 361° Approach fuses regulation, technology and last-mile networks
+            into solutions built for the real Rwandan market.
           </p>
           <div className="mt-8 grid sm:grid-cols-2 gap-4">
             {[
-              { t: "Strategy + R&D", d: "Market-validated product blueprints" },
-              { t: "Regulation-First", d: "Built for compliance from day one" },
-              { t: "Tech Platforms", d: "Proprietary digital infrastructure" },
-              { t: "Last-Mile Network", d: "451 ambassadors, 30 districts" },
+              { t: "Strategy + R&D", d: "Market-validated blueprints" },
+              { t: "Regulation-First", d: "Compliant by design" },
+              { t: "Tech Platforms", d: "Proprietary infrastructure" },
+              { t: "Last-Mile Network", d: "451 ambassadors · 30 districts" },
             ].map((b) => (
               <div key={b.t} className="glass rounded-2xl p-5">
                 <div className="font-semibold text-navy">{b.t}</div>
