@@ -23,10 +23,6 @@ export default function Innovations() {
             Solutions <span className="text-gradient">designed for Rwanda</span>
           </h2>
         </div>
-        <p className="text-navy/70 max-w-md">
-          Five flagship innovations under active development — each addressing a real gap in
-          Rwanda's financial and insurance landscape.
-        </p>
       </div>
 
       <div className="mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
