@@ -30,9 +30,9 @@ export default function Hero() {
             <span className="text-gradient">361° Holistic Approach</span>
           </h1>
           <p className="mt-6 text-lg text-navy/70 max-w-xl leading-relaxed">
-            A pioneering MARTECH and digital financial services firm transforming Rwanda's
-            economy through proprietary platforms, deep regulatory expertise, and an
-            ecosystem that goes one degree beyond a full circle.
+            A MARTECH and digital financial services firm reshaping Rwanda's economy
+            with proprietary platforms, regulatory depth, and an ecosystem one degree
+            beyond the circle.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a href="#services" className="group inline-flex items-center gap-2 rounded-2xl px-7 py-4 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-xl shadow-ilink/30 hover:shadow-ilink/50 transition-all hover:-translate-y-0.5 ring-focus">
