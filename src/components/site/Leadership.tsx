@@ -49,7 +49,16 @@ export default function Leadership() {
 
       <div className="mt-14 grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {leaders.map((l) => (
-          <div key={l.title} className="glass-strong rounded-3xl p-8 hover-lift reveal card-glow">
+          <div
+            key={l.title}
+            className="relative rounded-3xl p-8 hover-lift reveal card-glow backdrop-blur-2xl border border-white/80 ring-1 ring-ilink/10"
+            style={{
+              background:
+                "linear-gradient(140deg, hsl(0 0% 100% / 0.92) 0%, hsl(200 100% 97% / 0.85) 55%, hsl(199 88% 92% / 0.78) 100%)",
+              boxShadow:
+                "0 24px 60px -24px hsl(var(--navy) / 0.25), 0 4px 16px -4px hsl(var(--ilink-blue) / 0.12), inset 0 1px 0 hsl(0 0% 100% / 0.9)",
+            }}
+          >
             <div className="flex items-start gap-5">
               <div className="relative w-20 h-20 shrink-0 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-sky/25 to-ilink/15 rounded-2xl blur-lg" />
@@ -74,18 +83,24 @@ export default function Leadership() {
 
             <div className="mt-6 grid grid-cols-3 gap-3">
               {l.stats.map((s) => (
-                <div key={s.label} className="glass-blue rounded-2xl p-3 text-center">
+                <div
+                  key={s.label}
+                  className="rounded-2xl p-3 text-center backdrop-blur-md border border-white/90 ring-1 ring-ilink/15 bg-white/75 shadow-sm"
+                >
                   <div className="font-display font-bold text-2xl text-gradient leading-none">{s.value}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-navy/60 font-medium mt-1.5">{s.label}</div>
+                  <div className="text-[10px] uppercase tracking-wider text-navy/70 font-semibold mt-1.5">{s.label}</div>
                 </div>
               ))}
             </div>
 
             <div className="mt-4 flex flex-wrap gap-2">
               {l.chips.map((c) => (
-                <div key={c.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 border border-ilink/15">
+                <div
+                  key={c.label}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/85 border border-ilink/25 shadow-sm"
+                >
                   <c.icon size={13} className="text-ilink shrink-0" />
-                  <span className="text-xs font-medium text-navy">{c.label}</span>
+                  <span className="text-xs font-semibold text-navy">{c.label}</span>
                 </div>
               ))}
             </div>
