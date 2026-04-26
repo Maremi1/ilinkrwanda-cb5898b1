@@ -51,7 +51,7 @@ export default function Leadership() {
         {leaders.map((l) => (
           <div
             key={l.title}
-            className="relative rounded-3xl p-8 hover-lift reveal card-glow backdrop-blur-2xl border border-white/80 ring-1 ring-ilink/10"
+            className="group relative rounded-3xl p-8 hover-lift reveal card-glow backdrop-blur-2xl border-2 border-white/80 ring-1 ring-ilink/10 transition-all duration-500 hover:border-ilink/60 hover:ring-2 hover:ring-ilink/30"
             style={{
               background:
                 "linear-gradient(140deg, hsl(0 0% 100% / 0.92) 0%, hsl(200 100% 97% / 0.85) 55%, hsl(199 88% 92% / 0.78) 100%)",
@@ -73,11 +73,11 @@ export default function Leadership() {
                 />
               </div>
               <div>
-                <div className="text-[11px] uppercase tracking-widest text-ilink font-semibold">Co-Founder</div>
-                <h3 className="font-display font-bold text-navy text-lg md:text-xl leading-snug mt-1">
+                <div className="text-[11px] uppercase tracking-widest text-ilink font-semibold transition-colors group-hover:text-navy">Co-Founder</div>
+                <h3 className="font-display font-bold text-navy text-lg md:text-xl leading-snug mt-1 transition-colors group-hover:text-navy-deep">
                   {l.title}
                 </h3>
-                <p className="text-navy/65 text-sm mt-2">{l.tagline}</p>
+                <p className="text-navy/65 text-sm mt-2 transition-colors group-hover:text-navy/90">{l.tagline}</p>
               </div>
             </div>
 
@@ -85,10 +85,10 @@ export default function Leadership() {
               {l.stats.map((s) => (
                 <div
                   key={s.label}
-                  className="rounded-2xl p-3 text-center backdrop-blur-md border border-white/90 ring-1 ring-ilink/15 bg-white/75 shadow-sm"
+                  className="rounded-2xl p-3 text-center backdrop-blur-md border-2 border-white/90 ring-1 ring-ilink/15 bg-white/75 shadow-sm transition-all duration-300 group-hover:border-ilink/50 group-hover:ring-ilink/30 group-hover:bg-white/95"
                 >
                   <div className="font-display font-bold text-2xl text-gradient leading-none">{s.value}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-navy/70 font-semibold mt-1.5">{s.label}</div>
+                  <div className="text-[10px] uppercase tracking-wider text-navy/70 font-semibold mt-1.5 transition-colors group-hover:text-navy">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -97,10 +97,10 @@ export default function Leadership() {
               {l.chips.map((c) => (
                 <div
                   key={c.label}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/85 border border-ilink/25 shadow-sm"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/85 border-2 border-ilink/25 shadow-sm transition-all duration-300 group-hover:border-ilink/70 group-hover:bg-white"
                 >
                   <c.icon size={13} className="text-ilink shrink-0" />
-                  <span className="text-xs font-semibold text-navy">{c.label}</span>
+                  <span className="text-xs font-semibold text-navy transition-colors group-hover:text-navy-deep">{c.label}</span>
                 </div>
               ))}
             </div>
