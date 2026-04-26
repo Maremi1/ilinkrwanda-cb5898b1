@@ -51,7 +51,7 @@ export default function Leadership() {
         {leaders.map((l) => (
           <div
             key={l.title}
-            className="relative rounded-3xl p-8 hover-lift reveal card-glow backdrop-blur-2xl border border-white/80 ring-1 ring-ilink/10"
+            className="group relative rounded-3xl p-8 hover-lift reveal card-glow backdrop-blur-2xl border-2 border-white/80 ring-1 ring-ilink/10 transition-all duration-500 hover:border-ilink/60 hover:ring-2 hover:ring-ilink/30"
             style={{
               background:
                 "linear-gradient(140deg, hsl(0 0% 100% / 0.92) 0%, hsl(200 100% 97% / 0.85) 55%, hsl(199 88% 92% / 0.78) 100%)",
