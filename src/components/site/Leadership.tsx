@@ -49,7 +49,16 @@ export default function Leadership() {
 
       <div className="mt-14 grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
         {leaders.map((l) => (
-          <div key={l.title} className="glass-strong rounded-3xl p-8 hover-lift reveal card-glow">
+          <div
+            key={l.title}
+            className="relative rounded-3xl p-8 hover-lift reveal card-glow backdrop-blur-2xl border border-white/80 ring-1 ring-ilink/10"
+            style={{
+              background:
+                "linear-gradient(140deg, hsl(0 0% 100% / 0.92) 0%, hsl(200 100% 97% / 0.85) 55%, hsl(199 88% 92% / 0.78) 100%)",
+              boxShadow:
+                "0 24px 60px -24px hsl(var(--navy) / 0.25), 0 4px 16px -4px hsl(var(--ilink-blue) / 0.12), inset 0 1px 0 hsl(0 0% 100% / 0.9)",
+            }}
+          >
             <div className="flex items-start gap-5">
               <div className="relative w-20 h-20 shrink-0 flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-sky/25 to-ilink/15 rounded-2xl blur-lg" />
