@@ -7,22 +7,22 @@ const services = [
   {
     icon: Lightbulb,
     title: "Strategic R&D and Consultancy",
-    desc: "Market research, regulatory advisory, and product blueprints for financial inclusion, insurance and inclusive commerce — informed by deep policy and field expertise.",
+    desc: "Research, regulatory advisory and product blueprints for inclusive finance.",
     points: ["Market & policy research", "Regulatory frameworks", "Product blueprints"],
     img: imgRd,
   },
   {
     icon: GraduationCap,
     title: "Executive Training & Capacity Building",
-    desc: "Tailored programs that have certified 500+ executives across insurance, finance and digital transformation in Rwanda and beyond.",
+    desc: "500+ executives certified across insurance, finance and digital transformation.",
     points: ["Insurance & finance certification", "Leadership coaching", "Sales Accelerator 2026"],
     img: imgTraining,
   },
   {
     icon: Cpu,
     title: "Digital Platform Development",
-    desc: "End-to-end engineering of proprietary platforms — from architecture and design to deployment, integration and managed operations.",
-    points: ["Custom fintech & insuretech", "API & system integration", "Managed platform operations"],
+    desc: "End-to-end engineering of proprietary platforms — design to managed operations.",
+    points: ["Custom fintech & insuretech", "API & system integration", "Managed operations"],
     img: imgDev,
   },
 ];
