@@ -73,11 +73,11 @@ export default function Leadership() {
                 />
               </div>
               <div>
-                <div className="text-[11px] uppercase tracking-widest text-ilink font-semibold">Co-Founder</div>
-                <h3 className="font-display font-bold text-navy text-lg md:text-xl leading-snug mt-1">
+                <div className="text-[11px] uppercase tracking-widest text-ilink font-semibold transition-colors group-hover:text-navy">Co-Founder</div>
+                <h3 className="font-display font-bold text-navy text-lg md:text-xl leading-snug mt-1 transition-colors group-hover:text-navy-deep">
                   {l.title}
                 </h3>
-                <p className="text-navy/65 text-sm mt-2">{l.tagline}</p>
+                <p className="text-navy/65 text-sm mt-2 transition-colors group-hover:text-navy/90">{l.tagline}</p>
               </div>
             </div>
 
