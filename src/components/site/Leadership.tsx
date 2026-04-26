@@ -1,26 +1,38 @@
+import { Award, BookOpen, Briefcase, Globe2, ShieldCheck, Users, Sparkles, Landmark } from "lucide-react";
 import iconRegulatory from "@/assets/leadership-icon-regulatory.png";
 import iconTech from "@/assets/leadership-icon-tech.png";
 
 const leaders = [
   {
-    title: "Regulatory Authority and Financial Innovation Expert",
+    title: "Regulatory Authority & Financial Innovation Expert",
+    tagline: "Shaping inclusive finance across East & Central Africa.",
     icon: iconRegulatory,
-    points: [
-      "Provides deep institutional knowledge in financial policy, curriculum development, and professional certification frameworks.",
-      "Over 18 years of experience as a trusted advisor to governments and international organizations like the UNDP and ILO.",
-      "Authored national strategies for inclusive insurance and financial sector development.",
-      "Certified more than 500 professionals in finance and climate resilience through bespoke Training of Trainers (ToT) programs.",
-      "Author of over 10 books, including a winner of the prestigious AIO Best Book Award.",
+    stats: [
+      { value: "18+", label: "Years Advisory" },
+      { value: "500+", label: "Pros Certified" },
+      { value: "10+", label: "Books Authored" },
+    ],
+    chips: [
+      { icon: ShieldCheck, label: "UNDP & ILO Advisor" },
+      { icon: BookOpen, label: "National Strategies" },
+      { icon: Award, label: "AIO Best Book Award" },
+      { icon: Landmark, label: "Insurance Regulation" },
     ],
   },
   {
-    title: "Visionary Technologist and Government Policies Advocate",
+    title: "Visionary Technologist & Government Policies Advocate",
+    tagline: "Architecting Rwanda's digital and public-sector future.",
     icon: iconTech,
-    points: [
-      "A multi-award-winning leader who drives the company's strategic direction and digital transformation.",
-      "Over 15 years of experience in enterprise sales and e-Government procurement.",
-      "Excels at navigating complex regulatory environments to secure high-value national licenses and forge public-private partnerships.",
-      "Strategic influence extends to influential boards, including the AfCFTA Implementation Committee, shaping policy for cross-border digital trade.",
+    stats: [
+      { value: "15+", label: "Years Tech" },
+      { value: "9", label: "Platforms Built" },
+      { value: "1", label: "AfCFTA Seat" },
+    ],
+    chips: [
+      { icon: Briefcase, label: "Enterprise Sales" },
+      { icon: Globe2, label: "AfCFTA Committee" },
+      { icon: ShieldCheck, label: "e-Gov Procurement" },
+      { icon: Sparkles, label: "Multi-Award Winner" },
     ],
   },
 ];
@@ -31,43 +43,54 @@ export default function Leadership() {
       <div className="text-center max-w-3xl mx-auto reveal">
         <div className="text-xs font-semibold tracking-widest text-ilink mb-3">LEADERSHIP</div>
         <h2 className="font-display text-3xl md:text-5xl font-bold text-navy">
-          Our Foundational Strength is a{" "}
-          <span className="text-gradient">Synergistic Partnership</span> of Visionary Leaders
+          A <span className="text-gradient">synergistic partnership</span> of visionary leaders
         </h2>
       </div>
 
-      <div className="mt-14 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-px bg-navy/10 rounded-3xl overflow-hidden glass-strong">
-          {leaders.map((l) => (
-            <div key={l.title} className="bg-white/60 p-8 md:p-10 reveal">
-              <div className="flex justify-center mb-6">
-                <div className="relative w-28 h-28 flex items-center justify-center">
-                  <div className="absolute inset-0 bg-gradient-to-br from-sky/20 to-ilink/10 rounded-2xl blur-xl" />
-                  <img
-                    src={l.icon}
-                    alt={l.title}
-                    width={112}
-                    height={112}
-                    loading="lazy"
-                    decoding="async"
-                    className="relative w-28 h-28 object-contain"
-                  />
-                </div>
+      <div className="mt-14 grid md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+        {leaders.map((l) => (
+          <div key={l.title} className="glass-strong rounded-3xl p-8 hover-lift reveal card-glow">
+            <div className="flex items-start gap-5">
+              <div className="relative w-20 h-20 shrink-0 flex items-center justify-center">
+                <div className="absolute inset-0 bg-gradient-to-br from-sky/25 to-ilink/15 rounded-2xl blur-lg" />
+                <img
+                  src={l.icon}
+                  alt=""
+                  width={80}
+                  height={80}
+                  loading="lazy"
+                  decoding="async"
+                  className="relative w-20 h-20 object-contain"
+                />
               </div>
-              <h3 className="font-display font-bold text-navy text-xl md:text-2xl text-center leading-snug mb-6">
-                {l.title}
-              </h3>
-              <ul className="space-y-4">
-                {l.points.map((p, i) => (
-                  <li key={i} className="flex gap-3 text-navy/75 leading-relaxed">
-                    <span className="mt-2 w-1.5 h-1.5 rounded-full bg-ilink shrink-0" />
-                    <span>{p}</span>
-                  </li>
-                ))}
-              </ul>
+              <div>
+                <div className="text-[11px] uppercase tracking-widest text-ilink font-semibold">Co-Founder</div>
+                <h3 className="font-display font-bold text-navy text-lg md:text-xl leading-snug mt-1">
+                  {l.title}
+                </h3>
+                <p className="text-navy/65 text-sm mt-2">{l.tagline}</p>
+              </div>
             </div>
-          ))}
-        </div>
+
+            <div className="mt-6 grid grid-cols-3 gap-3">
+              {l.stats.map((s) => (
+                <div key={s.label} className="glass-blue rounded-2xl p-3 text-center">
+                  <div className="font-display font-bold text-2xl text-gradient leading-none">{s.value}</div>
+                  <div className="text-[10px] uppercase tracking-wider text-navy/60 font-medium mt-1.5">{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {l.chips.map((c) => (
+                <div key={c.label} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/70 border border-ilink/15">
+                  <c.icon size={13} className="text-ilink shrink-0" />
+                  <span className="text-xs font-medium text-navy">{c.label}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );
