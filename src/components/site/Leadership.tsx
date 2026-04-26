@@ -85,10 +85,10 @@ export default function Leadership() {
               {l.stats.map((s) => (
                 <div
                   key={s.label}
-                  className="rounded-2xl p-3 text-center backdrop-blur-md border border-white/90 ring-1 ring-ilink/15 bg-white/75 shadow-sm"
+                  className="rounded-2xl p-3 text-center backdrop-blur-md border-2 border-white/90 ring-1 ring-ilink/15 bg-white/75 shadow-sm transition-all duration-300 group-hover:border-ilink/50 group-hover:ring-ilink/30 group-hover:bg-white/95"
                 >
                   <div className="font-display font-bold text-2xl text-gradient leading-none">{s.value}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-navy/70 font-semibold mt-1.5">{s.label}</div>
+                  <div className="text-[10px] uppercase tracking-wider text-navy/70 font-semibold mt-1.5 transition-colors group-hover:text-navy">{s.label}</div>
                 </div>
               ))}
             </div>
@@ -97,10 +97,10 @@ export default function Leadership() {
               {l.chips.map((c) => (
                 <div
                   key={c.label}
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/85 border border-ilink/25 shadow-sm"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/85 border-2 border-ilink/25 shadow-sm transition-all duration-300 group-hover:border-ilink/70 group-hover:bg-white"
                 >
                   <c.icon size={13} className="text-ilink shrink-0" />
-                  <span className="text-xs font-semibold text-navy">{c.label}</span>
+                  <span className="text-xs font-semibold text-navy transition-colors group-hover:text-navy-deep">{c.label}</span>
                 </div>
               ))}
             </div>
