@@ -83,9 +83,24 @@ export default function Leadership() {
 
             <div className="mt-6 grid grid-cols-3 gap-3">
               {l.stats.map((s) => (
-                <div key={s.label} className="glass-blue rounded-2xl p-3 text-center">
+                <div
+                  key={s.label}
+                  className="rounded-2xl p-3 text-center backdrop-blur-md border border-white/90 ring-1 ring-ilink/15 bg-white/75 shadow-sm"
+                >
                   <div className="font-display font-bold text-2xl text-gradient leading-none">{s.value}</div>
-                  <div className="text-[10px] uppercase tracking-wider text-navy/60 font-medium mt-1.5">{s.label}</div>
+                  <div className="text-[10px] uppercase tracking-wider text-navy/70 font-semibold mt-1.5">{s.label}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-4 flex flex-wrap gap-2">
+              {l.chips.map((c) => (
+                <div
+                  key={c.label}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/85 border border-ilink/25 shadow-sm"
+                >
+                  <c.icon size={13} className="text-ilink shrink-0" />
+                  <span className="text-xs font-semibold text-navy">{c.label}</span>
                 </div>
               ))}
             </div>
