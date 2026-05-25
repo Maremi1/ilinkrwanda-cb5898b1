@@ -46,7 +46,7 @@ export default function Leadership() {
                   <img src={l.icon} alt="" width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 object-contain" />
                 </div>
                 <div className="space-y-2">
-                  <span className="text-[10px] font-bold uppercase tracking-widest text-ilink/80">Co-Founder</span>
+                  
                   <h3 className="font-display text-xl md:text-2xl font-bold leading-tight text-navy">{l.title}</h3>
                   <p className="text-sm text-navy/55">{l.tagline}</p>
                 </div>
