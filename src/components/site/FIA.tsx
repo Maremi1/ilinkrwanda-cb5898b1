@@ -1,5 +1,6 @@
-import { CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, CheckCircle2, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import fia1 from "@/assets/fia-1.jpg";
 import fia2 from "@/assets/fia-2.jpg";
 import fia3 from "@/assets/fia-3.jpg";
@@ -62,6 +63,12 @@ export default function FIA() {
               </li>
             ))}
           </ul>
+          <Link
+            to="/fia"
+            className="mt-7 inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-lg shadow-ilink/30 hover:shadow-ilink/50 transition-shadow"
+          >
+            Learn More <ArrowRight size={16} />
+          </Link>
         </div>
 
         {/* Image carousel */}
