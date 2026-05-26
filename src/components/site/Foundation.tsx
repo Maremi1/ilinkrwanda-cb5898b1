@@ -1,4 +1,5 @@
-import { Heart, Users, Sparkles, Leaf, Scale, GraduationCap } from "lucide-react";
+import { Heart, Users, Sparkles, Leaf, Scale, GraduationCap, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import banner from "@/assets/foundation-banner.jpg";
 
 const objectives = [
@@ -25,6 +26,12 @@ export default function Foundation() {
               Our INGO arm extends the I Link mission beyond commerce — investing in inclusion,
               resilience and dignity across Rwanda's most underserved communities.
             </p>
+            <Link
+              to="/foundation"
+              className="mt-7 inline-flex items-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold text-white bg-gradient-to-r from-orange-500 to-pink-500 shadow-lg shadow-orange-300/40 hover:shadow-orange-400/60 transition-shadow"
+            >
+              Learn More <ArrowRight size={16} />
+            </Link>
           </div>
           <div className="reveal">
             <div className="relative rounded-3xl overflow-hidden glass-strong p-2">
