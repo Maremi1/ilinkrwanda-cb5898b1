@@ -98,6 +98,32 @@ export default function Hero() {
         </div>
       </div>
 
+      {/* Inline story video */}
+      <div className="container mt-16 md:mt-24">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-6">
+            <div className="text-xs font-semibold tracking-widest text-ilink mb-2">OUR STORY</div>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-navy">Watch how I Link is reshaping Rwanda</h2>
+          </div>
+          <div className="glass-strong rounded-3xl p-3 shadow-2xl shadow-ilink/20">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-black">
+              {isEmbed ? (
+                <iframe
+                  src={STORY_VIDEO_URL}
+                  title="Our Story"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="w-full h-full"
+                />
+              ) : (
+                <video src={STORY_VIDEO_URL} controls className="w-full h-full" />
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
+
 
       {/* Video modal */}
       {open && (
