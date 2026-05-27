@@ -45,10 +45,11 @@ export default function Hero() {
             <a href="#services" className="group inline-flex items-center gap-2 rounded-2xl px-7 py-4 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-xl shadow-ilink/30 hover:shadow-ilink/50 transition-all hover:-translate-y-0.5 ring-focus">
               Explore Solutions <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#about" className="inline-flex items-center gap-2 glass rounded-2xl px-7 py-4 text-sm font-semibold text-navy hover:bg-white/85 transition-colors ring-focus">
+            <button onClick={() => setOpen(true)} className="inline-flex items-center gap-2 glass rounded-2xl px-7 py-4 text-sm font-semibold text-navy hover:bg-white/85 transition-colors ring-focus">
               <Play size={14} className="text-ilink" /> Watch Our Story
-            </a>
+            </button>
           </div>
+
 
           {/* Mini trust row */}
           <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-navy/60">
