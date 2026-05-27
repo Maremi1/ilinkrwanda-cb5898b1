@@ -1,8 +1,15 @@
 import logo from "@/assets/ilink-logo.png";
 import kigali from "@/assets/hero-kigali.jpg";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, X } from "lucide-react";
+import { useState } from "react";
+
+// 🎬 Replace this URL anytime with your own video (YouTube embed, Vimeo, or direct .mp4)
+const STORY_VIDEO_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ";
 
 export default function Hero() {
+  const [open, setOpen] = useState(false);
+  const isEmbed = /youtube\.com\/embed|player\.vimeo\.com/.test(STORY_VIDEO_URL);
+
   return (
     <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Background blobs */}
