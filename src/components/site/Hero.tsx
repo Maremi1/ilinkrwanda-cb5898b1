@@ -97,6 +97,40 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+
+      {/* Video modal */}
+      {open && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy-deep/80 backdrop-blur-sm p-4 animate-in fade-in"
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setOpen(false)}
+              aria-label="Close video"
+              className="absolute -top-3 -right-3 z-10 w-10 h-10 rounded-full bg-white text-navy flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+            >
+              <X size={18} />
+            </button>
+            {isEmbed ? (
+              <iframe
+                src={`${STORY_VIDEO_URL}${STORY_VIDEO_URL.includes("?") ? "&" : "?"}autoplay=1`}
+                title="Our Story"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            ) : (
+              <video src={STORY_VIDEO_URL} controls autoPlay className="w-full h-full" />
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
+
