@@ -1,8 +1,15 @@
 import logo from "@/assets/ilink-logo.png";
 import kigali from "@/assets/hero-kigali.jpg";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, X } from "lucide-react";
+import { useState } from "react";
+
+// 🎬 Replace this URL anytime with your own video (YouTube embed, Vimeo, or direct .mp4)
+const STORY_VIDEO_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ";
 
 export default function Hero() {
+  const [open, setOpen] = useState(false);
+  const isEmbed = /youtube\.com\/embed|player\.vimeo\.com/.test(STORY_VIDEO_URL);
+
   return (
     <section id="top" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
       {/* Background blobs */}
@@ -38,10 +45,11 @@ export default function Hero() {
             <a href="#services" className="group inline-flex items-center gap-2 rounded-2xl px-7 py-4 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-xl shadow-ilink/30 hover:shadow-ilink/50 transition-all hover:-translate-y-0.5 ring-focus">
               Explore Solutions <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#about" className="inline-flex items-center gap-2 glass rounded-2xl px-7 py-4 text-sm font-semibold text-navy hover:bg-white/85 transition-colors ring-focus">
+            <button onClick={() => setOpen(true)} className="inline-flex items-center gap-2 glass rounded-2xl px-7 py-4 text-sm font-semibold text-navy hover:bg-white/85 transition-colors ring-focus">
               <Play size={14} className="text-ilink" /> Watch Our Story
-            </a>
+            </button>
           </div>
+
 
           {/* Mini trust row */}
           <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-navy/60">
@@ -89,6 +97,40 @@ export default function Hero() {
           </div>
         </div>
       </div>
+
+
+      {/* Video modal */}
+      {open && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy-deep/80 backdrop-blur-sm p-4 animate-in fade-in"
+          onClick={() => setOpen(false)}
+        >
+          <div
+            className="relative w-full max-w-4xl aspect-video rounded-2xl overflow-hidden shadow-2xl bg-black"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setOpen(false)}
+              aria-label="Close video"
+              className="absolute -top-3 -right-3 z-10 w-10 h-10 rounded-full bg-white text-navy flex items-center justify-center shadow-lg hover:scale-110 transition-transform"
+            >
+              <X size={18} />
+            </button>
+            {isEmbed ? (
+              <iframe
+                src={`${STORY_VIDEO_URL}${STORY_VIDEO_URL.includes("?") ? "&" : "?"}autoplay=1`}
+                title="Our Story"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="w-full h-full"
+              />
+            ) : (
+              <video src={STORY_VIDEO_URL} controls autoPlay className="w-full h-full" />
+            )}
+          </div>
+        </div>
+      )}
     </section>
   );
 }
+
