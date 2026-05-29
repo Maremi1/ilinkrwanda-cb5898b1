@@ -28,10 +28,6 @@ export default function Hero() {
 
       <div className="container grid lg:grid-cols-2 gap-12 items-center">
         <div className="reveal">
-          <div className="inline-flex items-center gap-2 glass rounded-full px-4 py-1.5 mb-6">
-            <span className="w-2 h-2 rounded-full bg-ilink animate-pulse-glow" />
-            <span className="text-xs font-semibold tracking-widest text-navy/80">ARCHITECTING RWANDA'S DIGITAL & FINANCIAL FUTURE</span>
-          </div>
           <h1 className="font-display text-4xl md:text-5xl lg:text-[3.75rem] font-bold text-navy leading-[1.08] tracking-tight text-balance">
             Building Market-Ready Solutions with a{" "}
             <span className="text-gradient">361° Holistic Approach</span>
