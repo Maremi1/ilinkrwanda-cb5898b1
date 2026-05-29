@@ -107,7 +107,7 @@ export default function FoundationPage() {
                 <div className="font-display text-3xl md:text-4xl font-bold bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">
                   {s.value}
                 </div>
-                <div className="mt-1 text-xs uppercase tracking-widest text-navy/60">{s.label}</div>
+                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-navy/75">{s.label}</div>
               </div>
             ))}
           </div>
