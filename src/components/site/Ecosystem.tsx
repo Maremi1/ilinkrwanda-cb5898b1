@@ -26,7 +26,7 @@ export default function Ecosystem() {
             <div className="mt-6 glass-strong rounded-2xl p-5">
               <div className="text-xs uppercase tracking-widest text-ilink font-semibold">Reach</div>
               <div className="font-display text-2xl font-bold text-navy mt-1">Africa & Beyond</div>
-              <div className="text-sm text-navy/60 mt-1">5 sectors · 10+ proprietary brands</div>
+              <div className="text-sm text-navy/75 mt-1">5 sectors · 10+ proprietary brands</div>
             </div>
           </div>
 

@@ -48,7 +48,7 @@ export default function Hero() {
 
 
           {/* Mini trust row */}
-          <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-navy/60">
+          <div className="mt-10 flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-navy/75">
             <div className="flex -space-x-2">
               <span className="w-6 h-6 rounded-full bg-gradient-to-br from-ilink to-sky border-2 border-white" />
               <span className="w-6 h-6 rounded-full bg-gradient-to-br from-sky to-navy border-2 border-white" />

@@ -95,7 +95,7 @@ export default function FIAPage() {
             {stats.map((s) => (
               <div key={s.l} className="text-center">
                 <div className="font-display text-3xl md:text-4xl font-bold text-gradient">{s.v}</div>
-                <div className="mt-1 text-xs uppercase tracking-widest text-navy/60">{s.l}</div>
+                <div className="mt-1 text-xs font-semibold uppercase tracking-widest text-navy/75">{s.l}</div>
               </div>
             ))}
           </div>

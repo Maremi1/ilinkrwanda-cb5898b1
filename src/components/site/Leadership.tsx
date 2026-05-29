@@ -48,7 +48,7 @@ export default function Leadership() {
                 <div className="space-y-2">
                   
                   <h3 className="font-display text-xl md:text-2xl font-bold leading-tight text-navy">{l.title}</h3>
-                  <p className="text-sm text-navy/55">{l.tagline}</p>
+                  <p className="text-sm text-navy/70">{l.tagline}</p>
                 </div>
               </div>
 
@@ -56,7 +56,7 @@ export default function Leadership() {
                 {l.stats.map((s, i) => (
                   <div key={s.label} className={`text-center ${i === 1 ? "border-x border-navy/10" : ""}`}>
                     <div className="font-display text-xl font-extrabold text-navy">{s.value}</div>
-                    <div className="text-[10px] font-medium text-navy/40 uppercase tracking-tighter mt-1">{s.label}</div>
+                    <div className="text-[10px] font-semibold text-navy/75 uppercase tracking-tighter mt-1">{s.label}</div>
                   </div>
                 ))}
               </div>
