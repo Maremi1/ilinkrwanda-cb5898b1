@@ -3,7 +3,7 @@ import aboutFintech from "@/assets/about-fintech.jpg";
 import aboutRural from "@/assets/about-rural.jpg";
 
 const fieldStrip = [
-  { src: aboutTeam, alt: "I Link team meeting in modern Kigali office", caption: "Team strategy" },
+  { src: aboutTeam, alt: "iLink team meeting in modern Kigali office", caption: "Team strategy" },
   { src: aboutFintech, alt: "Hand holding smartphone with fintech dashboard", caption: "Digital platforms" },
   { src: aboutRural, alt: "Rural Rwandan landscape with cell tower at sunset", caption: "Last-mile reach" },
 ];

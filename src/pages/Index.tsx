@@ -20,8 +20,8 @@ const Index = () => {
   useReveal();
 
   useEffect(() => {
-    document.title = "I Link Rwanda — Architecting Rwanda's Digital & Financial Future";
-    const desc = "I Link Rwanda Limited: pioneering MARTECH and digital financial services with a 361° holistic approach — proprietary platforms, executive training, and the FIA network reaching 1.8M+ households.";
+    document.title = "iLink Rwanda — Architecting Rwanda's Digital & Financial Future";
+    const desc = "iLink Rwanda Limited: pioneering MARTECH and digital financial services with a 361° holistic approach — proprietary platforms, executive training, and the FIA network reaching 1.8M+ households.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");

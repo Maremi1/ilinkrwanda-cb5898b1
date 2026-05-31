@@ -17,7 +17,7 @@ export default function Ecosystem() {
           <div className="lg:sticky lg:top-28 reveal">
             <div className="text-xs font-semibold tracking-widest text-ilink mb-3">PARENT GROUP — THE VAULT</div>
             <h2 className="font-display text-3xl md:text-5xl font-bold text-navy leading-tight">
-              I Link Global <span className="text-gradient">Holdings</span>
+              iLink Global <span className="text-gradient">Holdings</span>
             </h2>
             <p className="mt-5 text-navy/70 text-lg leading-relaxed">
               A diversified MARTECH group with cross-sector licenses across Africa and beyond —

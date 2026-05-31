@@ -19,7 +19,7 @@ export default function Nav() {
     <header className="fixed top-3 left-1/2 -translate-x-1/2 z-50 w-[95%] max-w-7xl">
       <div className="glass rounded-2xl px-4 md:px-6 py-3 flex items-center justify-between">
         <a href="#top" className="flex items-center gap-2.5">
-          <img src={logo} alt="I Link Rwanda logo" className="h-9 w-9 object-contain" />
+          <img src={logo} alt="iLink Rwanda logo" className="h-9 w-9 object-contain" />
         </a>
         <nav className="hidden lg:flex items-center gap-7">
           {links.map((l) => (

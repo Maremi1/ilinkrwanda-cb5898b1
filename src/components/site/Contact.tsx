@@ -1,19 +1,32 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Mail, MapPin, Phone, Globe, Send } from "lucide-react";
+import emailjs from '@emailjs/browser';
 import { toast } from "sonner";
 import office from "@/assets/contact-office.jpg";
 
 export default function Contact() {
   const [sending, setSending] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSending(true);
-    setTimeout(() => {
-      setSending(false);
-      (e.target as HTMLFormElement).reset();
-      toast.success("Thank you. We'll be in touch shortly.");
-    }, 900);
+
+    const serviceId = 'service_8n6ssap';
+    const templateId = 'template_hawcq2g';
+    const publicKey = 'sX_-KdipdJkW9gyMT';
+
+    emailjs.sendForm(serviceId, templateId, formRef.current!, publicKey)
+      .then(() => {
+        setSending(false);
+        (e.target as HTMLFormElement).reset();
+        toast.success("Thank you. We'll be in touch shortly.");
+      })
+      .catch((error) => {
+        setSending(false);
+        toast.error("Failed to send message. Please try again.");
+        console.error("EmailJS Error:", error);
+      });
   };
 
   return (
@@ -33,25 +46,25 @@ export default function Contact() {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-8">
-          <form onSubmit={onSubmit} className="lg:col-span-3 glass-dark rounded-3xl p-7 md:p-9 space-y-5 reveal">
+          <form ref={formRef} onSubmit={onSubmit} className="lg:col-span-3 glass-dark rounded-3xl p-7 md:p-9 space-y-5 reveal">
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Name</label>
-                <input required className="input-dark mt-1.5" placeholder="Your full name" />
+                <input required name="user_name" className="input-dark mt-1.5" placeholder="Your full name" />
               </div>
               <div>
                 <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Company</label>
-                <input className="input-dark mt-1.5" placeholder="Organization" />
+                <input name="user_company" className="input-dark mt-1.5" placeholder="Organization" />
               </div>
             </div>
             <div className="grid md:grid-cols-2 gap-4">
               <div>
                 <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Email</label>
-                <input required type="email" className="input-dark mt-1.5" placeholder="you@company.com" />
+                <input required type="email" name="user_email" className="input-dark mt-1.5" placeholder="you@company.com" />
               </div>
               <div>
                 <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Interest</label>
-                <select className="input-dark mt-1.5 appearance-none cursor-pointer">
+                <select name="user_interest" className="input-dark mt-1.5 appearance-none cursor-pointer">
                   <option className="bg-navy">Strategic R&D / Consultancy</option>
                   <option className="bg-navy">Executive Training</option>
                   <option className="bg-navy">Digital Platforms</option>
@@ -62,7 +75,7 @@ export default function Contact() {
             </div>
             <div>
               <label className="text-[11px] font-semibold text-sky/90 uppercase tracking-wider">Message</label>
-              <textarea required rows={5} className="input-dark mt-1.5 resize-none" placeholder="Tell us about your project or opportunity" />
+              <textarea required name="message" rows={5} className="input-dark mt-1.5 resize-none" placeholder="Tell us about your project or opportunity" />
             </div>
             <button disabled={sending} className="inline-flex items-center gap-2 rounded-2xl px-7 py-4 text-sm font-semibold text-white bg-gradient-to-r from-ilink to-sky shadow-xl shadow-ilink/40 hover:shadow-ilink/60 transition-all hover:-translate-y-0.5 disabled:opacity-60 ring-focus">
               {sending ? "Sending..." : "Send Message"} <Send size={15} />

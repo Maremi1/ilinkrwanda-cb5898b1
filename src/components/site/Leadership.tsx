@@ -43,7 +43,7 @@ export default function Leadership() {
             <div className="relative bg-white/70 backdrop-blur-xl border border-white p-8 rounded-3xl flex flex-col h-full">
               <div className="flex items-start gap-6 mb-8">
                 <div className="shrink-0 w-16 h-16 rounded-2xl bg-sky-soft/60 flex items-center justify-center">
-                  <img src={l.icon} alt="" width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 object-contain" />
+                  <img src={l.icon} alt={`${l.title} icon`} width={48} height={48} loading="lazy" decoding="async" className="w-12 h-12 object-contain" />
                 </div>
                 <div className="space-y-2">
                   

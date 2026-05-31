@@ -78,7 +78,7 @@ export default function Hero() {
 
             {/* Center glass disc with logo */}
             <div className="absolute inset-1/4 glass-strong rounded-full flex items-center justify-center animate-float">
-              <img src={logo} alt="I Link chip" className="w-3/4 h-3/4 object-contain" />
+              <img src={logo} alt="iLink chip" className="w-3/4 h-3/4 object-contain" />
             </div>
 
             {/* Floating glass info chips */}
@@ -99,7 +99,7 @@ export default function Hero() {
         <div className="max-w-5xl mx-auto">
           <div className="text-center mb-6">
             <div className="text-xs font-semibold tracking-widest text-ilink mb-2">OUR STORY</div>
-            <h2 className="font-display text-2xl md:text-3xl font-bold text-navy">Watch how I Link is reshaping Rwanda</h2>
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-navy">Watch how iLink is reshaping Rwanda</h2>
           </div>
           <div className="glass-strong rounded-3xl p-3 shadow-2xl shadow-ilink/20">
             <div className="relative aspect-video rounded-2xl overflow-hidden bg-black">

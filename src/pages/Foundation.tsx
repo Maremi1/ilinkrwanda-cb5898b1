@@ -47,7 +47,7 @@ const stats = [
 
 export default function FoundationPage() {
   useEffect(() => {
-    document.title = "Mama Mia's Foundation — I Link Rwanda";
+    document.title = "Mama Mia's Foundation — iLink Rwanda";
     window.scrollTo(0, 0);
   }, []);
 
@@ -60,7 +60,7 @@ export default function FoundationPage() {
         <div className="absolute inset-0 -z-10" style={{ background: "radial-gradient(ellipse at top, hsl(30 100% 95%) 0%, hsl(210 50% 98%) 60%)" }} />
         <div className="container">
           <Link to="/#foundation" className="inline-flex items-center gap-2 text-sm text-navy/70 hover:text-ilink transition-colors mb-8">
-            <ArrowLeft size={16} /> Back to I Link
+            <ArrowLeft size={16} /> Back to iLink
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -70,7 +70,7 @@ export default function FoundationPage() {
                 <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">Foundation</span>
               </h1>
               <p className="mt-6 text-navy/70 text-lg leading-relaxed">
-                Born from I Link Rwanda's belief that prosperity must be shared, Mama Mia's Foundation
+                Born from iLink Rwanda's belief that prosperity must be shared, Mama Mia's Foundation
                 invests in the people too often left behind — women heads of household, rural youth,
                 smallholder farmers and displaced families. We move beyond charity, building lasting
                 systems of dignity, opportunity and resilience.
@@ -207,7 +207,7 @@ export default function FoundationPage() {
                 Become a Partner
               </Link>
               <Link to="/" className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold text-white border border-white/40 hover:bg-white/10 transition-colors">
-                Back to I Link Rwanda
+                Back to iLink Rwanda
               </Link>
             </div>
           </div>
