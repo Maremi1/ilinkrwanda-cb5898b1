@@ -171,9 +171,10 @@
     border-radius: inherit;
     padding: 1px;
     background: linear-gradient(135deg, hsl(var(--sky) / 0.5), transparent 40%, hsl(var(--ilink-blue) / 0.4));
-    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
+        -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+          mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+        -webkit-mask-composite: xor;
+          mask-composite: exclude;
     opacity: 0;
     transition: opacity 0.4s var(--transition-smooth);
     pointer-events: none;
