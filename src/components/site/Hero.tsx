@@ -4,7 +4,7 @@ import { ArrowRight, Play, X } from "lucide-react";
 import { useState } from "react";
 
 // 🎬 Replace this URL anytime with your own video (YouTube embed, Vimeo, or direct .mp4)
-const STORY_VIDEO_URL = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+const STORY_VIDEO_URL = "https://www.youtube.com/embed/41wXVemBxIY";
 
 export default function Hero() {
   const [open, setOpen] = useState(false);
