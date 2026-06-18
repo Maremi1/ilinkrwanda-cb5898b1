@@ -23,7 +23,7 @@ export default function Foundation() {
               Mama Mia's <span className="bg-gradient-to-r from-orange-500 to-pink-500 bg-clip-text text-transparent">Foundation</span>
             </h2>
             <p className="mt-5 text-navy/70 text-lg leading-relaxed">
-              Our INGO arm extends the iLink mission beyond commerce — investing in inclusion,
+              Our INGO arm extends the i Link mission beyond commerce — investing in inclusion,
               resilience and dignity across Rwanda's most underserved communities.
             </p>
             <Link

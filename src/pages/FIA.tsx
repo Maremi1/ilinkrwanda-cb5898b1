@@ -33,7 +33,7 @@ const gallery = [
 
 export default function FIAPage() {
   useEffect(() => {
-    document.title = "FIA Network Program — iLink Rwanda";
+    document.title = "FIA Network Program — i Link Rwanda";
     window.scrollTo(0, 0);
   }, []);
 
@@ -46,7 +46,7 @@ export default function FIAPage() {
         <div className="absolute inset-0 -z-10" style={{ background: "radial-gradient(ellipse at top, hsl(210 100% 96%) 0%, hsl(210 50% 98%) 60%)" }} />
         <div className="container">
           <Link to="/#impact" className="inline-flex items-center gap-2 text-sm text-navy/70 hover:text-ilink transition-colors mb-8">
-            <ArrowLeft size={16} /> Back to iLink
+            <ArrowLeft size={16} /> Back to i Link
           </Link>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -56,7 +56,7 @@ export default function FIAPage() {
               </h1>
               <p className="mt-6 text-navy/70 text-lg leading-relaxed">
                 The Financial Inclusion Ambassadors program is Rwanda's most ambitious last-mile
-                financial literacy and product distribution network. iLink Rwanda serves as Lead
+                financial literacy and product distribution network. i Link Rwanda serves as Lead
                 Implementing Partner and Technology Partner — recruiting, training and equipping
                 451 ambassadors who carry financial services directly to 1.8M+ households across
                 all 30 districts.
@@ -219,7 +219,7 @@ export default function FIAPage() {
                 Become a Partner
               </Link>
               <Link to="/" className="inline-flex items-center justify-center rounded-xl px-6 py-3 text-sm font-semibold text-white border border-white/40 hover:bg-white/10 transition-colors">
-                Back to iLink Rwanda
+                Back to i Link Rwanda
               </Link>
             </div>
           </div>

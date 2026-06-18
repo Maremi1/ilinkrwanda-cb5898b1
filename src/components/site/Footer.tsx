@@ -21,9 +21,9 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-10">
           <div className="md:col-span-2">
             <div className="flex items-center gap-3">
-              <img src={logo} alt="iLink Rwanda" className="h-11 w-11 object-contain bg-white rounded-xl p-1" />
+              <img src={logo} alt="i Link Rwanda" className="h-11 w-11 object-contain bg-white rounded-xl p-1" />
               <div>
-                <div className="font-display font-bold text-white text-lg">iLink Rwanda Limited</div>
+                <div className="font-display font-bold text-white text-lg">i Link Rwanda Limited</div>
                 <div className="text-xs text-white/50">Architecting Rwanda's Digital and Financial Future</div>
               </div>
             </div>
@@ -54,8 +54,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 pt-6 border-t border-white/10 flex flex-wrap justify-between gap-4 text-xs text-white/50">
-          <div>© {new Date().getFullYear()} iLink Rwanda Limited. All rights reserved.</div>
-          <div>A subsidiary of iLink Global Holdings · Africa & Beyond</div>
+          <div>© {new Date().getFullYear()} i Link Rwanda Limited. All rights reserved.</div>
+          <div>A subsidiary of i Link Global Holdings · Africa & Beyond</div>
         </div>
       </div>
     </footer>

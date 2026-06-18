@@ -11,6 +11,7 @@ import FIA from "@/components/site/FIA";
 import Ecosystem from "@/components/site/Ecosystem";
 import Platforms from "@/components/site/Platforms";
 import Foundation from "@/components/site/Foundation";
+import CorporateProfile from "@/components/site/CorporateProfile";
 import Contact from "@/components/site/Contact";
 import BrandMarquee from "@/components/site/BrandMarquee";
 import Footer from "@/components/site/Footer";
@@ -20,8 +21,8 @@ const Index = () => {
   useReveal();
 
   useEffect(() => {
-    document.title = "iLink Rwanda — Architecting Rwanda's Digital & Financial Future";
-    const desc = "iLink Rwanda Limited: pioneering MARTECH and digital financial services with a 361° holistic approach — proprietary platforms, executive training, and the FIA network reaching 1.8M+ households.";
+    document.title = "i Link Rwanda — Architecting Rwanda's Digital & Financial Future";
+    const desc = "i Link Rwanda Limited: pioneering MARTECH and digital financial services with a 361° holistic approach — proprietary platforms, executive training, and the FIA network reaching 1.8M+ households.";
     let meta = document.querySelector('meta[name="description"]');
     if (!meta) {
       meta = document.createElement("meta");
@@ -45,6 +46,7 @@ const Index = () => {
       <Ecosystem />
       <Platforms />
       <Foundation />
+      <CorporateProfile />
       <BrandMarquee />
       <Contact />
       <Footer />

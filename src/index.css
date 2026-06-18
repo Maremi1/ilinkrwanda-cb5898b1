@@ -4,8 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
-/* I Link Rwanda Design System
-   Palette inspired by the iLink chip logo: deep navy, electric blue, sky tint.
+/* i Link Rwanda Design System
+   Palette inspired by the i Link chip logo: deep navy, electric blue, sky tint.
    Glassmorphism-first with circuit motifs.
    All colors HSL.
 */
@@ -21,7 +21,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 219 65% 12%;
 
-    /* iLink electric blue */
+    /* i Link electric blue */
     --primary: 203 82% 51%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 199 88% 72%;
